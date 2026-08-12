@@ -1,1 +1,749 @@
 
+/* ==========================================
+   THE PINK WHISK
+   MAIN STYLESHEET
+========================================== */
+
+:root{
+
+    --pink:#FF5FA2;
+    --lightPink:#FFE7F1;
+    --cream:#FFF8FB;
+    --white:#ffffff;
+    --dark:#5A3A42;
+    --gray:#777;
+    --shadow:0px 20px 40px rgba(255,95,162,.18);
+    --radius:28px;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+    background:linear-gradient(to bottom,#FFF8FB,#FFEFF7,#FFF8FB);
+    color:var(--dark);
+    overflow-x:hidden;
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+section{
+
+    padding:100px 8%;
+
+}
+
+h1,h2,h3{
+
+    font-family:"DM Serif Display",serif;
+    font-weight:400;
+
+}
+
+.small-title{
+
+    color:var(--pink);
+    font-weight:600;
+    letter-spacing:2px;
+    margin-bottom:15px;
+
+}
+
+.section-title{
+
+    text-align:center;
+    margin-bottom:60px;
+
+}
+
+.section-title p{
+
+    color:var(--pink);
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:3px;
+
+}
+
+.section-title h2{
+
+    font-size:3rem;
+    margin-top:15px;
+
+}
+
+/* ==========================
+      NAVBAR
+========================== */
+
+header{
+
+    position:sticky;
+    top:0;
+    z-index:999;
+    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,.75);
+
+}
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+
+}
+
+.logo h2{
+
+    color:var(--pink);
+    font-family:"Pacifico",cursive;
+    font-size:2rem;
+
+}
+
+.nav-links{
+
+    display:flex;
+    list-style:none;
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--pink);
+
+}
+
+.nav-buttons{
+
+    display:flex;
+    gap:15px;
+
+}
+
+.instagram-btn{
+
+    padding:12px 26px;
+    border:2px solid var(--pink);
+    border-radius:100px;
+    transition:.35s;
+
+}
+
+.instagram-btn:hover{
+
+    background:var(--pink);
+    color:white;
+
+}
+
+.order-btn{
+
+    padding:12px 28px;
+    background:var(--pink);
+    color:white;
+    border-radius:100px;
+    box-shadow:var(--shadow);
+    transition:.35s;
+
+}
+
+.order-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================
+      HERO
+========================== */
+
+.hero{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
+    min-height:90vh;
+    position:relative;
+
+}
+
+.hero h1{
+
+    font-size:5rem;
+    line-height:1;
+
+}
+
+.hero-text{
+
+    margin:30px 0;
+    font-size:1.1rem;
+    color:var(--gray);
+    line-height:1.8;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+    margin-top:30px;
+
+}
+
+.main-button{
+
+    background:var(--pink);
+    color:white;
+    padding:18px 36px;
+    border-radius:100px;
+    font-weight:600;
+    transition:.35s;
+    box-shadow:var(--shadow);
+
+}
+
+.main-button:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.secondary-button{
+
+    background:white;
+    padding:18px 36px;
+    border-radius:100px;
+    font-weight:600;
+    box-shadow:var(--shadow);
+
+}
+
+.secondary-button:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.review-box{
+
+    margin-top:40px;
+    background:white;
+    padding:20px 25px;
+    border-radius:20px;
+    width:fit-content;
+    box-shadow:var(--shadow);
+
+}
+
+.review-box span{
+
+    display:block;
+    margin-top:8px;
+    color:gray;
+
+}
+
+.hero-right{
+
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.hero-right img{
+
+    max-width:500px;
+    border-radius:40px;
+    box-shadow:0 35px 60px rgba(255,95,162,.22);
+
+}
+
+.floating-cookie,
+.floating-cupcake,
+.floating-heart{
+
+    position:absolute;
+    font-size:3rem;
+    animation:float 5s ease-in-out infinite;
+
+}
+
+.floating-cookie{
+
+    top:5%;
+    left:0;
+
+}
+
+.floating-cupcake{
+
+    bottom:10%;
+    right:0;
+
+}
+
+.floating-heart{
+
+    top:15%;
+    right:8%;
+
+}
+
+/* ==========================
+      FEATURED
+========================== */
+
+.featured-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+
+}
+
+.cake-card{
+
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.35s;
+
+}
+
+.cake-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.cake-card img{
+
+    height:260px;
+    object-fit:cover;
+
+}
+
+.cake-card h3{
+
+    margin:25px;
+
+}
+
+.cake-card p{
+
+    margin:0 25px 25px;
+    color:gray;
+    line-height:1.7;
+
+}
+
+.cake-card a{
+
+    display:inline-block;
+    margin:0 25px 30px;
+    color:var(--pink);
+    font-weight:600;
+
+}
+/* ==========================================
+        WHY US
+========================================== */
+
+.why-us{
+
+    position:relative;
+
+}
+
+.why-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+
+}
+
+.why-card{
+
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(12px);
+
+    padding:40px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:0 20px 45px rgba(255,95,162,.10);
+
+    transition:.35s;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-12px) scale(1.03);
+
+    box-shadow:0 35px 60px rgba(255,95,162,.18);
+
+}
+
+.why-card h3{
+
+    font-size:1.7rem;
+
+    margin-bottom:18px;
+
+}
+
+.why-card p{
+
+    color:#777;
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================
+        MEET THE BAKER
+========================================== */
+
+.meet-baker{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.baker-image{
+
+    position:relative;
+
+}
+
+.baker-image img{
+
+    border-radius:40px;
+
+    box-shadow:0 40px 70px rgba(255,95,162,.18);
+
+}
+
+.baker-image::before{
+
+    content:"";
+
+    width:180px;
+
+    height:180px;
+
+    background:#FFD7EA;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    top:-50px;
+
+    left:-50px;
+
+    z-index:-1;
+
+}
+
+.baker-image::after{
+
+    content:"";
+
+    width:250px;
+
+    height:250px;
+
+    background:#FFEFF7;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    bottom:-60px;
+
+    right:-60px;
+
+    z-index:-1;
+
+}
+
+.baker-text h2{
+
+    font-size:3.5rem;
+
+    margin-bottom:25px;
+
+}
+
+.baker-text p{
+
+    line-height:2;
+
+    color:#666;
+
+    margin-bottom:35px;
+
+}
+
+
+/* ==========================================
+        GALLERY
+========================================== */
+
+.gallery-preview{
+
+    text-align:center;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+    margin-bottom:50px;
+
+}
+
+.gallery-grid img{
+
+    border-radius:28px;
+
+    height:320px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+    cursor:pointer;
+
+    box-shadow:0 20px 50px rgba(255,95,162,.12);
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.05) rotate(1deg);
+
+}
+
+
+/* ==========================================
+        REVIEWS
+========================================== */
+
+.review-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.review-card{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:35px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(255,95,162,.12);
+
+    transition:.35s;
+
+}
+
+.review-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.review-card h3{
+
+    color:#ffb400;
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+.review-card p{
+
+    line-height:2;
+
+    color:#666;
+
+    font-style:italic;
+
+    margin-bottom:25px;
+
+}
+
+.review-card span{
+
+    color:var(--pink);
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================
+        ORDER STEPS
+========================================== */
+
+.steps{
+
+    text-align:center;
+
+}
+
+.steps-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.step{
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:50px;
+
+    box-shadow:0 20px 50px rgba(255,95,162,.10);
+
+    transition:.35s;
+
+}
+
+.step:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.step-number{
+
+    width:75px;
+
+    height:75px;
+
+    background:linear-gradient(135deg,#FF5FA2,#FF8EC0);
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+    font-weight:bold;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+}
+
+.step h3{
+
+    margin-bottom:15px;
+
+    font-size:2rem;
+
+}
+
+.step p{
+
+    color:#777;
+
+    line-height:1.8;
+
+}
+.announcement{
+
+    background:linear-gradient(90deg,#FF8FC2,#FF5FA2);
+
+    color:white;
+
+    text-align:center;
+
+    padding:12px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+}
